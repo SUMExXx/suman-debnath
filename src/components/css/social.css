@@ -1,0 +1,32 @@
+.social-bar{
+    position: fixed;
+    display: inline-flex;
+    height: 660px;
+    padding: 10px 10px 10px 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+
+    left: 0;
+}
+
+.icon{
+    width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+
+    fill: #484848;
+}
+
+.social-toggle{
+    background: transparent;
+    padding: 0px;
+    transition: none;
+}
+
+.social-toggle:hover{
+    background: #FFF;
+    border-color: transparent;
+}

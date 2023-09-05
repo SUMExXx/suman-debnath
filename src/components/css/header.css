@@ -1,0 +1,64 @@
+.header{
+    position: fixed;
+    display: flex;
+    
+    box-sizing: border-box;
+    width: 100%;
+        padding: 10px 40px;
+        align-items: center;
+        gap: 20px;
+
+    background: #1AB357;
+
+    color: #FFF;
+    font-family: 'JosefinSans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sd-logo{
+    height: 40px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.nav-link{
+    color: #FFF;
+    font-family: 'JosefinSans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+    
+}
+
+.nav-link:hover{
+    /* text-decoration: underline; */
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    color: #FFF;
+}
+
+.cv-button{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 10px;
+    background: #1A3CB3;
+
+    color: #FFF;
+    white-space: nowrap;
+}
