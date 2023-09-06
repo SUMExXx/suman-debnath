@@ -5,7 +5,7 @@ import './css/header.css'
 function Header() {
   return (
     <header className='header'>
-        <img src='/icons/sd_logo.png' className='sd-logo'/>
+        <img src='src/assets/icons/sd_logo.png' className='sd-logo'/>
         <nav className='nav-bar'>
           <a className='nav-link' href=''>About</a>
           <a className='nav-link' href=''>Projects</a>

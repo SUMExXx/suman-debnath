@@ -31,7 +31,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  background: url("images/background.png") repeat, #DDFFEF;
+  background: url("src/assets/images/background.png") repeat, #DDFFEF;
   background-size: 400px 400px;
   background-attachment: fixed;
   /* background: url("images/background.jpg") repeat 20% #DDFFEF; */
@@ -80,5 +80,5 @@ button:focus-visible {
 
 @font-face {
   font-family: 'JosefinSans';
-  src: url('fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+  src: url('assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
 }
