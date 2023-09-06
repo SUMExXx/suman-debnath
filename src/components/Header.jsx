@@ -18,22 +18,26 @@ function Header() {
   return (
     <header className='header'>
       <div className='head-div'>
-          <img src={sdlogo} className='sd-logo'/>
+          <a href='./'><img src={sdlogo} className='sd-logo'/></a>
           <nav className='nav-bar'>
             <a className='nav-link' id='about' href=''>About</a>
-            <a className='nav-link' id='projects' href=''>Projects</a>
             <a className='nav-link' id='experience' href=''>Experience</a>
+            <a className='nav-link' id='projects' href=''>Projects</a>
             <a className='nav-link' id='hobbies' href=''>Hobbies</a>
             <a className='nav-link' id='contact' href=''>Contact</a>
-            <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-caret-down-fill caret" id='nav-caret' onClick={toggleCaret} viewBox="0 0 16 16">
-              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-            </svg>
+            <div className='caret-container'>
+              <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-caret-down-fill caret" id='nav-caret' onClick={toggleCaret} viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+            </div>
             <a href='/pdf/Resume.pdf' download="Resume"><button className='cv-button'>Download CV</button></a>
           </nav>
         </div>
         <div className='link-overflow' >
-          <a className='link-overflow-item nav-link' href='./'>Hobbies</a>
-          <a className='link-overflow-item nav-link' href='./'>Contact</a>
+          <a className='link-overflow-item nav-link' id='About-drop' href='./'>About</a>
+          <a className='link-overflow-item nav-link' id='Projects-drop' href='./'>Projects</a>
+          <a className='link-overflow-item nav-link' id='Hobbies-drop' href='./'>Hobbies</a>
+          <a className='link-overflow-item nav-link' id='Contact-drop' href='./'>Contact</a>
         </div>
         <Social/>
         <style >{`

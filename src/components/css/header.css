@@ -105,24 +105,73 @@
     
 }
 
+@media screen and (min-width: 700px) {
+    #About-drop {
+        display: none;
+    }
+
+    #Hobbies-drop{
+        display: none;
+    }
+
+    #Contact-drop {
+        display: none;
+    }
+
+    #Projects-drop {
+        display: none;
+    }
+
+    .caret-container{
+        display: none;
+    }
+}
+
 
 @media screen and (max-width: 700px) {
-    #hobbies{
+    #about{
         display: none;
+    }
+
+    #Hobbies-drop{
+        display: none;
+    }
+
+    #Contact-drop{
+        display: none;
+    }
+
+    #Projects-drop{
+        display: none;
+    }
+
+    .caret-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: #DDFFEF;
+        border-radius: 10px;
+    
     }
 
     .caret{
         display: inline-block;
+        fill: #1A3CB3;
     }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 686px) {
     #contact {
         display: none;
     }
+
+    #Contact-drop{
+        display: flex;
+    }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 618px) {
     
     .head-div{
         display: flex;
@@ -147,6 +196,12 @@
     .caret{
         height: 12px;
         width: 12px;
+        
+    }
+
+    .caret-container{
+        padding: 8px;
+        border-radius: 6px;
     }
 
     .cv-button{
@@ -156,8 +211,32 @@
     }
 }
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 394px) {
+    #hobbies{
+        display: none;
+    }
+
+    #Hobbies-drop{
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 394px) {
+    #Hobbies-drop{
+        display: none;
+    }
+
+    #hobbies{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 338px) {
     #projects{
         display: none;
+    }
+
+    #Projects-drop{
+        display: flex;
     }
 }
