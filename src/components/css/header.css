@@ -4,18 +4,30 @@
     
     box-sizing: border-box;
     width: 100%;
-        padding: 10px 40px;
-        align-items: center;
-        gap: 20px;
+    
 
     background: #1AB357;
-
+    flex-direction: column;
     color: #FFF;
     font-family: 'JosefinSans';
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+@media screen and (max-width: 580px){
+    .header{
+        font-size: 12px;
+    }
+}
+
+.head-div{
+    display: flex;
+    width: 100%;
+        padding: 10px 40px;
+        align-items: center;
+        gap: 20px;
 }
 
 .sd-logo{
@@ -49,6 +61,14 @@
     color: #FFF;
 }
 
+.caret{
+    display: none;
+    width: 16px;
+        height: 16px;
+
+    fill: #fff;
+}
+
 .cv-button{
     display: flex;
     padding: 10px;
@@ -61,4 +81,83 @@
 
     color: #FFF;
     white-space: nowrap;
+}
+
+.link-overflow{
+    display: none;
+        width: 100%;
+        flex-direction: column;
+        
+}
+
+.link-overflow-item{
+
+    display: flex;
+    width: 100%;
+    padding: 10px 0px;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 10px;
+    
+        border-top: 1px solid #C5C5C5;
+        
+
+    
+}
+
+
+@media screen and (max-width: 700px) {
+    #hobbies{
+        display: none;
+    }
+
+    .caret{
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #contact {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    
+    .head-div{
+        display: flex;
+            padding: 10px;
+            align-items: center;
+            gap: 10px;
+    }
+
+    .nav-bar{
+        gap: 10px;
+    }
+
+    .sd-logo{
+        width: 54.545px;
+            height: 30px;
+    }    
+
+    .nav-link{
+        font-size: 12px;
+    }
+
+    .caret{
+        height: 12px;
+        width: 12px;
+    }
+
+    .cv-button{
+        padding: 8px;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    #projects{
+        display: none;
+    }
 }

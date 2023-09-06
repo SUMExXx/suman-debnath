@@ -30,3 +30,36 @@
     background: #FFF;
     border-color: transparent;
 }
+
+
+
+@media screen and (max-width: 700px) {
+    .social-bar{
+            position: unset;
+            display: inline-flex;
+            width: 100%;
+            
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-shrink: 0;
+            padding: 10px 10px 10px 10px;
+            height: auto;
+            left: 0;
+            right: auto;
+
+            background-color: #FFF;
+        
+            
+    }
+
+    .icon{
+        height: 24px;
+        width: 24px;
+    }
+
+    .toggle-icon {
+        rotate: 90deg;
+    }
+}
