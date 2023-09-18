@@ -1,69 +1,98 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useState, Component, useEffect } from 'react'
 
 import './css/content.css'
+import MainContent from './MainContent'
+import WebContent from './Experience'
+import PropTypes from 'prop-types';
 
-function Content() {
+// Content.propTypes = {
+//   reference: PropTypes.string
+// }
+Content.propTypes = {
+  reference : PropTypes.string
+}
+
+function Content({reference}) {
+
+  // eslint-disable-next-line no-unused-vars
+  // const [content, setContent] = useState(<WebContent clicked='web-skill'/>)
+  // const [content, setContent] = useState(<MainContent/>)
+
+  var content = <MainContent />
+
+  const setContent = (c) =>{
+    content = c
+  }
+
+  
+
+  const changeContent = () =>{
+
+    if(reference == 'experience'){
+    
+      setContent(<WebContent/>) 
+      
+    }
+
+    if(reference == 'projects'){
+      
+      setContent(<WebContent/>) 
+    }
+
+    if(reference == 'hobbies'){
+      
+      setContent(<WebContent/>) 
+    }
+
+    if(reference == 'about'){
+      
+      setContent(<MainContent/>) 
+      
+    }
+
+    if(reference == 'contact'){
+      
+      setContent(<WebContent/>) 
+    }
+  }
+
+  changeContent()
+
+  
+
+
+
+
+
+  
+
+  // const [skills, setSkills] = useState(true)
+
+  
+
+  // const displaySkills = () =>{
+  //   setSkills(!skills)
+  // }
+
+  
+  
+
+  
+
   return (
     <div className='content-box'>
         <div className='main-content'>
-            <div className='image'/>
-            <div className='about-box'>
-                <div className='about-1'>
-                    <h3 className='head-text'>Hi! I am <span className='name'>Suman Debnath</span><br/>and I am a...</h3>
-                    <div className='skill-holder'>
-                        <button className='skill-button'>
-                            <h4 className='button-text'>Web Developer</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-x close-but" viewBox="0 0 16 16">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </button>
-                        <button className='skill-button'>
-                            <h4 className='button-text'>Graphic Designer</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-x close-but" viewBox="0 0 16 16">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </button>
-                        <button className='skill-button'>
-                            <h4 className='button-text'>UI/UX Designer</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-x close-but" viewBox="0 0 16 16">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </button>
-                        <button className='skill-button'>
-                            <h4 className='button-text'>Flutter Developer</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-x close-but" viewBox="0 0 16 16">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div className='about-2'>
-                    <h3 className='head-text'>I also Like being a...</h3>
-                    <div className='skill-holder'>
-                        <button className='skill-button skill-but-2'>
-                            <h4 className='button-text'>Vocalist</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-x close-but" viewBox="0 0 16 16">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </button>
-                        <button className='skill-button skill-but-2'>
-                            <h4 className='button-text'>Instrumentalist</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-x close-but" viewBox="0 0 16 16">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </button>
-                        <button className='skill-button skill-but-2'>
-                            <h4 className='button-text'>Film Critic</h4>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-x close-but" viewBox="0 0 16 16">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+          
+          
+            {content}
+          
+          
+          
         </div>
-    </div>
+        
+      </div>
   )
 }
 
