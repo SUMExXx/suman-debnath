@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './css/webContent.css'
-import techtext from '/src/assets/files/web.js'
+import { useAsync } from 'react-async'
 import tech from '/src/assets/files/tech.js'
 import {useState} from 'react'
 
@@ -35,7 +35,7 @@ function WebContent() {
     else if(clicked == 'graphic-skill'){
       data = 'graphic'
     }
-    else if(clicked == 'ui-ux-skill'){
+    else if(clicked == 'uiux-skill'){
       data = 'uiux'
     }
     else if(clicked == 'flutter-skill'){
@@ -45,9 +45,11 @@ function WebContent() {
 
   setData()
 
-  var techItems = tech[data].map((t) =><a key={crypto.randomUUID()} className='tech-items'><span className='tech-text'>{t}</span></a>)
+  
+
+  // var techItems = tech[data].map((t) =><a key={crypto.randomUUID()} className='tech-items'><span className='tech-text'>{t}</span></a>)
   // var techItems = tech.map()
-  console.log(tech[data])
+  
   return (
     <div className='content-holder'>
         <div className='skills-button-div'>
@@ -60,22 +62,33 @@ function WebContent() {
         <div className='tech-content-div'>
             <div className='tech-div'>
               {
-                techItems
+               tech[data]['skill'].map((t) =><a key={crypto.randomUUID()} className='tech-items'><span className='tech-text'>{t}</span></a>)
               }
                 
             </div>
             <div className='tech-text-div'>
-                <p className='tech-para'>{techtext}</p>
+                <p className='tech-para'>{tech[data]['content']}</p>
             </div>
         </div>
         <div className='image-gallery' >
-            <img className='tech-images' src='/src/assets/images/SumanDebnath.png'/>
-            <img className='tech-images' src='/src/assets/images/SumanDebnath.png'/>
-            <img className='tech-images' src='/src/assets/images/SumanDebnath.png'/>
-            <img className='tech-images' src='/src/assets/images/SumanDebnath.png'/>
-            <img className='tech-images' src='/src/assets/images/SumanDebnath.png'/>
-            <img className='tech-images' src='/src/assets/images/SumanDebnath.png'/>
-            <img className='tech-images' src='/src/assets/images/SumanDebnath.png'/>
+          <div className='image-col'>
+            {
+              tech[data]['images']['col1'].map( (t) =><img key={crypto.randomUUID()} className='tech-images' src={`/images/${tech[data]['domain']}/${t}`} loading='lazy'/>)
+              
+            }
+          </div>
+          <div className='image-col'>
+            {
+              tech[data]['images']['col2'].map( (t) =><img key={crypto.randomUUID()} className='tech-images' src={`/images/${tech[data]['domain']}/${t}`} loading='lazy'/>)
+            }
+          </div>
+          <div className='image-col'>
+            {
+              tech[data]['images']['col3'].map( (t) =><img key={crypto.randomUUID()} className='tech-images' src={`/images/${tech[data]['domain']}/${t}`} loading='lazy'/>)
+            }
+          </div>
+          
+            
         </div>
         <style >{`
           .skills-button-div{
@@ -84,6 +97,7 @@ function WebContent() {
 
           .main-content{
             padding-top: ${skills ? '20px' : '80px'};
+            
           }
 
           
