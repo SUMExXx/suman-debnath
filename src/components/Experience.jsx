@@ -67,7 +67,7 @@ function WebContent() {
                 
             </div>
             <div className='tech-text-div'>
-                <p className='tech-para'>{tech[data]['content']}</p>
+                <p dangerouslySetInnerHTML={{ __html: tech[data]['content']}} className='tech-para'></p>
             </div>
         </div>
         <div className='image-gallery' >
