@@ -1,6 +1,6 @@
 const tech = {
     'web': {
-        'skill': ['React.JS', 'Node.JS', 'HTML', 'CSS', 'JavaScript', 'BootStrap', 'SQL', 'Docker', 'TailwindCSS'],
+        'skill': ['React.JS', 'Node.JS', 'HTML', 'CSS', 'JavaScript', 'BootStrap', 'SQL', 'Docker', 'TailwindCSS', 'FastAPI', 'Express.JS', 'APIs'],
         'content': "I have experience in <b>Python</b>, <b>Java</b>, <b>C/C++</b>, <b>JavaScript</b>, <b>Dart</b> and <b>Assembly</b> programming languages. My web development text stack includes <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>Bootstrap</b>, <b>TailwindCSS</b>, <b>React.JS</b>, <strong>Node.JS</strong> and <strong>SQL</strong>. I also pursue mobile app development using <b>Flutter</b>. <br/><br/><span><b>E-Cell Website</b></span>: <a href=\"https://ecellsgsits.com\" target=\"_blank\">ecellsgsits.com</a><br/><span><b>GSPH Website</b></span>: <a href=\"https://gsph.netlify.com\" target=\"_blank\">gsph.netlify.com</a>",
         'images': {
             'col1':  ['11.png','12.png', '13.png', '14.png', '15.png', '16.png'],
