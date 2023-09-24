@@ -25,7 +25,7 @@ const tech = {
         'images': {
             'col1':  ['11.png','12.png', '13.png'],
             'col2': ['21.png', '22.png', '23.png', '24.png'],
-            'col3': ['31.png', '32.png', '33.png', '34.png']
+            'col3': ['31.png', '32.png']
         },
         'domain': 'uiux' 
     },
